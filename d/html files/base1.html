@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../style files/main-style.css">
+    <link rel="stylesheet" type="text/css" href="../style files/slider.css">
+    <link rel="stylesheet" type="text/css" href="../style files/content.css">
+    <title>
+        {% block title %}
+        Shop  
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="middle-side">
+            <div class="dropdown">
+                <div class="mainmenubtn"><a href="{% url 'site-home' %}">Lady's Secret</a></div>
+                <div class="dropdown-child">
+                    <a href="">OXFORDS</a>
+                    <a href="">DERBY</a>
+                    <a href="">BROGUE</a>
+                    <a href="">LOAFERS
+                        </a>
+                    <a href="">WINTER SEASON</a>
+                </div>
+            </div>
+            <span class="main-link"><a class="exp" href="{% url 'sales_list_url' %}">Скидки</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'products_list_url' %}">Каталог</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'categories_list_url' %}">Категории</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'contact' %}">Оставить отзыв</a></span>
+
+            
+        </div>
+
+        <div id="right-side">
+            {% if user.is_authenticated %}
+            <span class="main-link"><a class="exp" href="{% url 'profile' %}">{{user.username}}</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'logout' %}">Выход</a></span>
+            {% else %}
+            <span class="main-link"><a class="exp" href="{% url 'login' %}">Войти</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'logout' %}">Создать аккаунт</a></span>
+            % endif %}
+        </div>
+    </div>
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+</html>
+
+
+

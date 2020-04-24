@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: #EFEEEE;
+}
+
+#header {
+    flex-grow: 1;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 90px;
+    background-image: linear-gradient(rgb(254, 119, 1), #FE4D01);
+}
+
+input {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 35vw;
+    height: 2.5em;
+    border: none;
+    border-radius: 3px;
+}
+
+.mainmenubtn {
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1em;
+    min-width: 9%;
+}
+
+.mainmenubtn:hover {
+    color: black;
+    opacity: 0.5;
+}
+
+a {
+    color: black;
+}
+
+.main-link {
+    margin-left: 1vw;
+    font-size: 1em;
+    padding-left: 1vw;
+}
+
+.exp {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.exp:hover {
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 5vw;
+    padding-right: 2vw;
+}
+
+.dropdown-child {
+    padding-top: 2vh;
+    display: none;
+    background-color: white;
+    min-width: 100px;
+    float: left;
+}
+
+.dropdown-child a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-family: none;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+#middle-side {
+    margin-top: 2.5vh;
+    margin-left: 8vw;
+    position: relative;
+    min-height: 7%;
+    min-width: 50%;
+    max-width: 70%;
+    padding: 2vh 0 2vw 2vw;
+    float: left;
+}
+
+#right-side {
+    position: relative;
+    display: inline-block;
+    width: 22.5vw;
+    min-height: 7vh;
+    margin-top: 3vh;
+}
+
+#right-side span {
+    margin-top: 2vh;
+    margin-right: 3vw;
+    float: left;
+}
+
+#right-side button {
+    border: none;
+    height: 7vh;
+    padding: 0 1.5vw 0 1.5vw;
+    background-color: white;
+    cursor: pointer;
+}
+
+#right-side button:hover {
+    background-color: grey;
+    opacity: 0.5;
+}
+
+#slider {
+    /*положение слайдера*/
+    position: absolute;
+    text-align: center;
+    top: 90px;
+}
+
+
+/* ===================================================left bar========================================= */
+
+#left-bar {
+    position: absolute;
+    margin-left: 2.5vw;
+    margin-top: 110px;
+}
+
+#option {
+    border-style: solid;
+    border-radius: 5px;
+    border: 1px solid #FE4D01;
+    width: 15vw;
+    height: 27vw;
+}
+
+.options {
+    font-size: 0.75em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+.options img {
+    width: 30px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.options p {
+    font-size: larger;
+    padding-top: 5px;
+}
+
+.options:hover {
+    opacity: 0.6;
+}
+
+
+/* =======================================================Middle-side============================================== */
+
+#mid-bar {
+    flex-grow: 1;
+    background-image: linear-gradient(#FE7701, #FE4D01);
+    position: absolute;
+    top: 38.5vw;
+    width: 100%;
+}
+
+.mid-buttons {
+    width: 80vw;
+    margin-left: 10vw;
+    display: flex;
+}
+
+.mid-button {
+    width: 16vw;
+    height: 50px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+/* ============================================footer======================================================== */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    text-align: right;
+    height: 70px;
+    padding: 40px;
+    background-image: linear-gradient(#FE7701, #FE4D01);
+    ;
+}

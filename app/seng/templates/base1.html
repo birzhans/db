@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main-style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'slider.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'content.css' %}">
+    <title>
+        {% block title %}
+        Shop  
+        {% endblock %}
+    </title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="middle-side">
+            <div class="dropdown">
+                <div class="main-link"><a class="exp" href="{% url 'site-home' %}">Lady's Secret</a></div>
+                <div class="dropdown-child">
+                    <a href="">Зимний сезон</a>
+                    <a href="">Новая коллекция</a>
+                    <a href="">В школу</a>
+                    <a href="">Подарки</a>
+                </div>
+            </div>
+            <span class="main-link"><a class="exp" href="{% url 'sales_list_url' %}">Скидки</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'products_list_url' %}">Каталог</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'categories_list_url' %}">Категории</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'contact' %}">Оставить отзыв</a></span>
+
+            
+        </div>
+
+        <div id="right-side" style="padding-top: 5px">
+            {% if user.is_authenticated %}
+            <span class="main-link"><a class="exp" href="{% url 'profile' %}">{{user.username}}</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'logout' %}">Выход</a></span>
+            {% else %}
+            <span class="main-link"><a class="exp" href="{% url 'login' %}">Войти</a></span>
+            <span class="main-link"><a class="exp" href="{% url 'logout' %}">Создать аккаунт</a></span>
+            {% endif %}
+        </div>
+    </div>
+<div style="padding-top: 100px;">
+{% block content %}
+{% endblock %}
+</div>
+<div class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>Наши контакты: 87776555531</p>
+                <p>Местоположение: Конституция Казахстана 144</p>
+                <p>Оплата: Наличными</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../style files/main-style.css">
+    <link rel="stylesheet" type="text/css" href="../style files/goods.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">
+        <div id="middle-side">
+            <div class="dropdown">
+                <div class="mainmenubtn">MARKET🢓</div>
+                <div class="dropdown-child">
+                    <a href="">OXFORDS</a>
+                    <a href="">DERBY</a>
+                    <a href="">BROGUE</a>
+                    <a href="">LOAFERS
+                        </a>
+                    <a href="">WINTER SEASON</a>
+                </div>
+            </div>
+            <span class="main-link"><a class="exp" href="">COLLABORATIONS</a></span>
+
+            <input type="text" placeholder="  Number or Email" onfocus="this.placeholder 
+            = ''" onblur="this.placeholder = '  Number or Email'">
+        </div>
+
+        <div id="right-side">
+            <span><a class="exp" href="">LOG IN</a></span>
+            <button href="">GET STARTED</button>
+        </div>
+    </div>
+
+
+    <!-- ----------------------------------------GOODS----------------------------------------- -->
+
+
+    <div class="goods">
+        <div class="product-name">
+            <h2>Это какокой то товар из китая, который я не могу оценить</h2>
+            <img src="../icons/405.svg" alt="">
+        </div>
+        <div class="product-card">
+            <div class="gallery">
+                <div class="small-products">
+                    <img src="../Images/televizor.jpg" alt="" onclick="myFunc(this)">
+                    <img src="../Images/загруженное.jfif" alt="" onclick="myFunc(this)">
+                    <img src="../Images/televizor.jpg" alt="" onclick="myFunc(this)">
+                    <img src="../Images/загруженное.jfif" alt="" onclick="myFunc(this)">
+                    <img src="../Images/televizor.jpg" alt="" onclick="myFunc(this)">
+                </div>
+                <div class="img-container">
+                    <img id="imageBox" src="../Images/televizor.jpg" alt="">
+                </div>
+                <script>
+                    function myFunc(smallImg) {
+                        var fullImg = document.getElementById("imageBox");
+                        fullImg.src = smallImg.src;
+                    }
+                </script>
+            </div>
+
+
+
+            <div class="description">
+
+                <div class="product-cost">
+                    <h1>1000rub</h1>
+                    <p><del>2000rub</del></p>
+                </div>
+                <div class="product-description">
+                    <h2>Описание:</h2>
+                    <p>Какой то непонятный для меня предмет который я не умею юзать </p>
+                    <div class="main-descriptions">
+                        <div class="first-d">
+                            <p>Цвет</p>
+                        </div>
+
+                        <div class="bordered"></div>
+                        <div class="second-d">
+                            <p>Зилубой</p>
+                        </div>
+
+                    </div>
+                    <div class="main-descriptions">
+                        <div class="first-d">
+                            <p>вес</p>
+                        </div>
+
+                        <div class="bordered"></div>
+                        <div class="second-d">
+                            <p>Зилубой</p>
+                        </div>
+                    </div>
+                    <div class="main-descriptions">
+                        <div class="first-d">
+                            <p>производитель</p>
+                        </div>
+
+                        <div class="bordered"></div>
+                        <div class="second-d">
+                            <p>Зилубой</p>
+                        </div>
+                    </div>
+                    <div class="main-descriptions">
+                        <div class="first-d">
+                            <p>бренд</p>
+                        </div>
+
+                        <div class="bordered"></div>
+                        <div class="second-d">
+                            <p>Зилубой</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------------CHARACTERISICS------------------------------->
+    <div class="panel">
+        <button class="accordion">характеристики</button>
+
+        <div class="characteristics">
+            <div class="product-description">
+
+                <div class="main-descriptions">
+                    <div class="first-d">
+                        <p>Цвет</p>
+                    </div>
+
+                    <div class="bordered"></div>
+                    <div class="second-d">
+                        <p>Зилубой</p>
+                    </div>
+
+                </div>
+                <div class="main-descriptions">
+                    <div class="first-d">
+                        <p>вес</p>
+                    </div>
+
+                    <div class="bordered"></div>
+                    <div class="second-d">
+                        <p>Зилубой</p>
+                    </div>
+                </div>
+                <div class="main-descriptions">
+                    <div class="first-d">
+                        <p>производитель</p>
+                    </div>
+
+                    <div class="bordered"></div>
+                    <div class="second-d">
+                        <p>Зилубой</p>
+                    </div>
+                </div>
+                <div class="main-descriptions">
+                    <div class="first-d">
+                        <p>бренд</p>
+                    </div>
+
+                    <div class="bordered"></div>
+                    <div class="second-d">
+                        <p>Зилубой</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var accordions = document.querySelectorAll("button.accordion");
+        for (var i = 0; i < accordions.length; i++) {
+            accordions[i].onclick = function() {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("show");
+            }
+        }
+    </script>
+
+    </div>
+
+
+
+
+
+    <!-- =============================================FOOTER======================================================== -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>Наши контакты:-------------</p>
+                <p>Местоположение:------------</p>
+                <p>Оплата:------------</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
